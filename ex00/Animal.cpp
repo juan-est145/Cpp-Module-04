@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:13:35 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/08 17:21:38 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/08 17:34:56 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ Animal &Animal::operator=(const Animal &toCopy)
 {
 	std::cout << "The animal copy assignment operator was called" << std::endl;
 	if (this != &toCopy)
-	{
 		this->_type = toCopy._type;
-	}
 	return (*this);
 }
 
