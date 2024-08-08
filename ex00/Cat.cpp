@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:26:01 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/08 17:40:32 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/08 17:42:06 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ Cat &Cat::operator=(const Cat &toCopy)
 	if (this != &toCopy)
 		this->_type = toCopy._type;
 	return (*this);
+}
+
+void Cat::makeSound(void) const
+{
+	std::cout << "Meeeeeoooooowww" << std::endl;
 }
 
 Cat::~Cat(void)
