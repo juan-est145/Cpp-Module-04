@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:13:35 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/08 17:34:56 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/08 17:59:39 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ Animal &Animal::operator=(const Animal &toCopy)
 void Animal::makeSound(void) const
 {
 	std::cout << "*Weird, undefined animal noises*" << std::endl;
+}
+
+std::string Animal::getType(void) const
+{
+	return (this->_type);
 }
 
 Animal::~Animal(void)

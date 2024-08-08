@@ -6,11 +6,23 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:38:56 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/08 17:39:07 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/08 17:59:45 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int main (void)
+#include "Animal.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
+
+int main(void)
 {
+	const Animal *meta = new Animal();
+	const Animal *j = new Dog();
+	const Animal *i = new Cat();
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound(); // will output the cat sound!
+	j->makeSound();
+	meta->makeSound(); 
 	return (0);
 }
