@@ -12,7 +12,7 @@ public:
 	Animal(void);
 	Animal(const Animal &toCopy);
 	Animal &operator=(const Animal &toCopy);
-	virtual ~Animal(void);
 	virtual void makeSound(void) const;
+	virtual ~Animal(void);
 };
 #endif

@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:13:35 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/08 17:17:35 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/08 17:21:38 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,20 @@ Animal::Animal(const Animal &toCopy)
 
 Animal &Animal::operator=(const Animal &toCopy)
 {
+	std::cout << "The animal copy assignment operator was called" << std::endl;
 	if (this != &toCopy)
 	{
 		this->_type = toCopy._type;
 	}
 	return (*this);
+}
+
+void Animal::makeSound(void) const
+{
+	std::cout << "*Weird, undefined animal noises*" << std::endl;
+}
+
+Animal::~Animal(void)
+{
+	std::cout << "Animal destructor was called" << std::endl;
 }
