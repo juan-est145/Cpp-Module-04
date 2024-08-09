@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:50:52 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/09 12:41:33 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/09 17:56:14 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,11 @@ Dog &Dog::operator=(const Dog &toCopy)
 void Dog::makeSound(void) const
 {
 	std::cout << "Woof Woof!!!" << std::endl;
+}
+
+void Dog::brainAddress(void) const
+{
+	std::cout << this->_brain << std::endl;
 }
 
 Dog::~Dog(void)

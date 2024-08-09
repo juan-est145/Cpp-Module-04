@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:26:01 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/09 12:41:32 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/09 18:18:28 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,11 @@ Cat &Cat::operator=(const Cat &toCopy)
 void Cat::makeSound(void) const
 {
 	std::cout << "Meeeeeoooooowww" << std::endl;
+}
+
+void Cat::brainAddress(void) const
+{
+	std::cout << this->_brain << std::endl;
 }
 
 Cat::~Cat(void)

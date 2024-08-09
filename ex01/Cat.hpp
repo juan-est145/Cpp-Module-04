@@ -16,6 +16,7 @@ public:
 	Cat(const Cat &toCopy);
 	Cat &operator=(const Cat &toCopy);
 	void makeSound(void) const;
+	void brainAddress(void) const;
 	~Cat(void);
 };
 #endif
