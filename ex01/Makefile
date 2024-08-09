@@ -5,6 +5,7 @@ Cat.cpp\
 Dog.cpp\
 WrongAnimal.cpp\
 WrongCat.cpp\
+Brain.cpp\
 main.cpp\
 
 OBJS = $(SRCS:.cpp=.o)
@@ -14,6 +15,7 @@ Cat.hpp\
 Dog.hpp\
 WrongAnimal.hpp\
 WrongCat.hpp\
+Brain.hpp\
 
 CXX = $(shell which c++ clang++ g++ | head -n 1)
 
