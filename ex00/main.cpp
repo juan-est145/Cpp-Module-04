@@ -6,13 +6,15 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:38:56 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/08 18:01:40 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/09 12:01:10 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int main(void)
 {
@@ -28,5 +30,11 @@ int main(void)
 	delete meta;
 	delete j;
 	delete i;
+	std::cout << std::endl;
+
+	const WrongAnimal *confusedCat = new WrongCat();
+	std::cout << confusedCat->getType() << std::endl;
+	confusedCat->makeSound();
+	delete confusedCat;
 	return (0);
 }
