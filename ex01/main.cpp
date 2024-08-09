@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:38:56 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/09 12:01:10 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/09 12:41:34 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main(void)
 	std::cout << i->getType() << std::endl;
 	i->makeSound(); // will output the cat sound!
 	j->makeSound();
-	meta->makeSound(); 
+	meta->makeSound();
 
 	delete meta;
 	delete j;

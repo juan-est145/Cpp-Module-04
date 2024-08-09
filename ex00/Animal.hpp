@@ -8,6 +8,7 @@ class Animal
 {
 protected:
 	std::string _type;
+
 public:
 	Animal(void);
 	Animal(const Animal &toCopy);
