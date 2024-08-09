@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:38:56 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/09 12:41:34 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/09 13:00:17 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,33 @@
 #include "Dog.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
+#include "Brain.hpp"
 
 int main(void)
 {
-	const Animal *meta = new Animal();
-	const Animal *j = new Dog();
-	const Animal *i = new Cat();
-	std::cout << j->getType() << std::endl;
-	std::cout << i->getType() << std::endl;
-	i->makeSound(); // will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
+	Animal *animals[20];
 
-	delete meta;
-	delete j;
-	delete i;
+	for (unsigned int i = 0; i < 20; i++)
+	{
+		if (i % 2 == 0)
+		{
+			animals[i] = new Cat();
+			animals[i]->makeSound();
+			std::cout << std::endl;
+		}
+
+		else
+		{
+			animals[i] = new Dog();
+			animals[i]->makeSound();
+			std::cout << std::endl;
+		}
+	}
 	std::cout << std::endl;
-
-	const WrongAnimal *confusedCat = new WrongCat();
-	std::cout << confusedCat->getType() << std::endl;
-	confusedCat->makeSound();
-	delete confusedCat;
+	for (unsigned int i = 0; i < 20; i++)
+	{
+		delete animals[i];
+		std::cout << std::endl;
+	}	
 	return (0);
 }

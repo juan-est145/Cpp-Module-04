@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 12:11:04 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/09 12:41:32 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/09 12:52:52 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ Brain::Brain(void)
 Brain::Brain(const Brain &toCopy)
 {
 	std::cout << "Brain copy constructor has been called" << std::endl;
+	*this = toCopy;
 }
 
 Brain &Brain::operator=(const Brain &toCopy)
@@ -29,8 +30,8 @@ Brain &Brain::operator=(const Brain &toCopy)
 	{
 		for (unsigned int i = 0; i < 100; i++)
 			this->ideas[i] = toCopy.ideas[i];
-		return (*this);
 	}
+	return (*this);
 }
 
 Brain::~Brain(void)
