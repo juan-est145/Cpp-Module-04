@@ -1,11 +1,13 @@
 NAME = interface.out
 
-SRCS = AMateria.cpp
+SRCS = AMateria.cpp\
+Ice.cpp\
 main.cpp\
 
 OBJS = $(SRCS:.cpp=.o)
 
-HEADER = AMateria.hpp|
+HEADER = AMateria.hpp\
+Ice.hpp\
 
 CXX = $(shell which c++ clang++ g++ | head -n 1)
 

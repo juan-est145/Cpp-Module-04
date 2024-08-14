@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 18:46:37 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/14 09:56:54 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/14 10:49:32 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,5 @@ std::string const &AMateria::getType() const
 {
 	return (this->_type);
 }
+
+AMateria::~AMateria(void) {}

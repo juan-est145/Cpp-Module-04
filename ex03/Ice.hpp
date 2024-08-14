@@ -11,7 +11,7 @@ public:
 	Ice(void);
 	Ice(const Ice &toCopy);
 	Ice &operator=(const Ice &toCopy);
-	virtual AMateria *clone() const;
+	AMateria *clone() const;
 	//virtual void use(ICharacter &target); Character interface pending to be created
 	~Ice(void);
 };

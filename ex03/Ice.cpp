@@ -6,19 +6,19 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 10:09:21 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/14 10:25:01 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/14 10:46:59 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice(void)
+Ice::Ice(void) : AMateria()
 {
 	std::cout << "Default constructor of ice was called" << std::endl;
 	this->_type = "ice";
 }
 
-Ice::Ice(const Ice &toCopy)
+Ice::Ice(const Ice &toCopy) : AMateria(toCopy)
 {
 	std::cout << "Copy constructor of ice was called" << std::endl;
 	*this = toCopy;
@@ -32,12 +32,12 @@ Ice &Ice::operator=(const Ice &toCopy)
 	return (*this);
 }
 
-AMateria *AMateria::clone() const
+AMateria *Ice::clone() const
 {
 	return (new Ice());
 }
 
-AMateria::~AMateria(void)
+Ice::~Ice(void)
 {
 	std::cout << "Destructor of ice was called" << std::endl;
 }
