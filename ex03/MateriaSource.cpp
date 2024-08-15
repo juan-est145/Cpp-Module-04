@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 19:44:05 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 20:04:31 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 20:16:48 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void MateriaSource::_initMaterias(void)
 void MateriaSource::_copyMaterias(const MateriaSource &toCopy)
 {
 	for (unsigned int i = 0; i < this->_size; i++)
-		this->_knownMaterias[i] = toCopy._knownMaterias[i];
+		this->_knownMaterias[i] = toCopy._knownMaterias[i]->clone();
 }
 
 void MateriaSource::_destroyMaterias(void)
@@ -54,6 +54,19 @@ MateriaSource &MateriaSource::operator=(const MateriaSource &toCopy)
 		this->_copyMaterias(toCopy);
 	}
 	return (*this);
+}
+
+void MateriaSource::learnMateria(AMateria *materia)
+{
+	for (unsigned int i = 0; i < this->_size; i++)
+	{
+		if (this->_knownMaterias[i] != NULL)
+		{
+			this->_knownMaterias[i] = materia->clone();
+			return;
+		}
+	}
+	std::cout << "This Source can't learn more Materias" << std::endl;
 }
 
 MateriaSource::~MateriaSource(void)

@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 15:18:14 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 19:36:53 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 20:15:34 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void Character::_destroyInventory(void)
 void Character::_copyInventory(const Character &toCopy)
 {
 	for (unsigned int i = 0; i < this->_size; i++)
-			this->_inventory[i] = toCopy._inventory[i];	
+			this->_inventory[i] = toCopy._inventory[i]->clone();	
 }
 void Character::_initGround(void)
 {
@@ -50,7 +50,7 @@ void Character::_destroyGround(void)
 void Character::_copyGround(const Character &toCopy)
 {
 	for (unsigned int i = 0; i < this->_groundSize; i++)
-			this->_ground[i] = toCopy._ground[i];	
+			this->_ground[i] = toCopy._ground[i]->clone();	
 }
 
 
@@ -128,7 +128,7 @@ void Character::equip(AMateria *m)
 
 void Character::unequip(int idx)
 {
-	if (idx < 0 || idx >= this->_size || this->_inventory[idx] == NULL)
+	if (idx < 0 || (unsigned int)idx >= this->_size || this->_inventory[idx] == NULL)
 	{
 		std::cout << "Invalid index" << std::endl;
 		return ;
@@ -140,7 +140,7 @@ void Character::unequip(int idx)
 
 void Character::use(int idx, ICharacter &target)
 {
-	if (idx < 0 || idx >= this->_size || this->_inventory[idx] == NULL)
+	if (idx < 0 || (unsigned int)idx >= this->_size || this->_inventory[idx] == NULL)
 	{
 		std::cout << "Invalid index" << std::endl;
 		return ;
