@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:38:56 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/09 18:19:19 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 09:41:57 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int main(void)
 	const Cat *cat2 = new Cat();
 	const Dog *dog1 = new Dog();
 	const Dog *dog2 = new Dog();
-	
+
 	cat1->brainAddress();
 	cat2->brainAddress();
 	dog1->brainAddress();
