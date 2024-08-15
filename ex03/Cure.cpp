@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 09:25:22 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 20:32:29 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 20:47:57 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,4 @@ void Cure::use(ICharacter &target)
 	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }
 
-Cure::~Cure(void)
-{
-	std::cout << "Destructor of cure was called" << std::endl;
-}
+Cure::~Cure(void) {}

@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 18:44:48 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 20:37:15 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 20:47:09 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,20 @@ int main(void)
 	ICharacter *bob = new Character("bob");
 	me->use(0, *bob);
 	me->use(1, *bob);
+	me->use(2, *bob);
+	me->use(-5, *bob);
+	me->use(600, *bob);
+
+	src->learnMateria(src->createMateria("ice"));
+
+	IMateriaSource *newSrc = new MateriaSource();
+	newSrc->learnMateria(new Cure());
+	src->learnMateria(newSrc->createMateria("cure"));
 	
 	delete bob;
 	delete me;
 	delete src;
+	delete newSrc;
 
 	return (0);
 }

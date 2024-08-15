@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 10:09:21 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 20:32:49 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 20:47:51 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,4 @@ void Ice::use(ICharacter &target)
 	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }
 
-Ice::~Ice(void)
-{
-	std::cout << "Destructor of ice was called" << std::endl;
-}
+Ice::~Ice(void) {}
