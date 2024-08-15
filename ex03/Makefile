@@ -4,6 +4,7 @@ SRCS = AMateria.cpp\
 Ice.cpp\
 Cure.cpp\
 Character.cpp\
+MateriaSource.cpp\
 main.cpp\
 
 OBJS = $(SRCS:.cpp=.o)
@@ -13,6 +14,8 @@ Ice.hpp\
 Cure.hpp\
 Character.hpp\
 ICharacter.hpp\
+IMateriaSource.hpp\
+MateriaSource.hpp\
 
 CXX = $(shell which c++ clang++ g++ | head -n 1)
 
