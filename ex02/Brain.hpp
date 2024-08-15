@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <cstdlib>
 
 class Brain
 {
@@ -13,6 +14,7 @@ public:
 	Brain(void);
 	Brain(const Brain &toCopy);
 	Brain &operator=(const Brain &toCopy);
+	void printIdeas(void) const;
 	~Brain(void);
 };
 #endif

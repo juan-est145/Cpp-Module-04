@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:26:01 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 09:41:55 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 11:12:57 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,11 @@ void Cat::makeSound(void) const
 void Cat::brainAddress(void) const
 {
 	std::cout << this->_brain << std::endl;
+}
+
+void Cat::printIdeas(void) const
+{
+	this->_brain->printIdeas();
 }
 
 Cat::~Cat(void)
