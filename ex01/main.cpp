@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:38:56 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 09:42:00 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 11:06:25 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,9 @@ int main(void)
 	cat2->brainAddress();
 	dog1->brainAddress();
 	dog2->brainAddress();
+
+	cat1->printIdeas();
+	dog1->printIdeas();
 
 	delete cat1;
 	delete cat2;

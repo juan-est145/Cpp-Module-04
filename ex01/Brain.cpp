@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 12:11:04 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 09:41:58 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 11:04:54 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,19 @@
 
 Brain::Brain(void)
 {
+	std::string thoughts[] = {"Eating", "Sleeping", "Walking", "Idle"};
+	unsigned int size = (unsigned int)(sizeof(this->_ideas) / sizeof(this->_ideas[0]));
+	for (unsigned int i = 0; i < size; i++)
+		this->_ideas[i] = thoughts[rand() % 4];
 	std::cout << "Brain constructor has been called" << std::endl;
 }
 
 Brain::Brain(const Brain &toCopy)
 {
+	unsigned int size = (unsigned int)(sizeof(this->_ideas) / sizeof(this->_ideas[0]));
 	std::cout << "Brain copy constructor has been called" << std::endl;
-	*this = toCopy;
+	for (unsigned int i = 0; i < size; i++)
+		this->_ideas[i] = toCopy._ideas[i];
 }
 
 Brain &Brain::operator=(const Brain &toCopy)
@@ -29,9 +35,17 @@ Brain &Brain::operator=(const Brain &toCopy)
 	if (this != &toCopy)
 	{
 		for (unsigned int i = 0; i < 100; i++)
-			this->ideas[i] = toCopy.ideas[i];
+			this->_ideas[i] = toCopy._ideas[i];
 	}
 	return (*this);
+}
+
+void Brain::printIdeas(void) const
+{
+	unsigned int size = (unsigned int)(sizeof(this->_ideas) / sizeof(this->_ideas[0]));
+	for (unsigned int i = 0; i < size; i++)
+		std::cout << this->_ideas[i] << std::endl;
+	std::cout << std::endl;
 }
 
 Brain::~Brain(void)

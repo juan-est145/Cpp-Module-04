@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:50:52 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 09:41:59 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 11:05:43 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,11 @@ void Dog::makeSound(void) const
 void Dog::brainAddress(void) const
 {
 	std::cout << this->_brain << std::endl;
+}
+
+void Dog::printIdeas(void) const
+{
+	this->_brain->printIdeas();
 }
 
 Dog::~Dog(void)
