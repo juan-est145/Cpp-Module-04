@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 15:18:14 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 20:15:34 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 20:30:54 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,7 @@ void Character::equip(AMateria *m)
 {
 	for (unsigned int i = 0; i < this->_size; i++)
 	{
-		if (this->_inventory[i] != NULL)
+		if (this->_inventory[i] == NULL)
 		{
 			this->_inventory[i] = m;
 			std::cout << "Materia " << m->getType() << " has been stored at index " << i << std::endl;
