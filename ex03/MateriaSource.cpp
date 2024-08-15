@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 19:44:05 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 20:16:48 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 20:19:34 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,16 @@ void MateriaSource::learnMateria(AMateria *materia)
 		}
 	}
 	std::cout << "This Source can't learn more Materias" << std::endl;
+}
+
+AMateria *MateriaSource::createMateria(std::string const &type)
+{
+	for (unsigned int i = 0; i < this->_size; i++)
+	{
+		if (this->_knownMaterias[i]->getType() == type)
+			return (this->_knownMaterias[i]->clone());
+	}
+	return (0);
 }
 
 MateriaSource::~MateriaSource(void)
