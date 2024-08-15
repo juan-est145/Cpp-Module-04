@@ -3,6 +3,7 @@ NAME = interface.out
 SRCS = AMateria.cpp\
 Ice.cpp\
 Cure.cpp\
+Character.cpp\
 main.cpp\
 
 OBJS = $(SRCS:.cpp=.o)
@@ -10,6 +11,7 @@ OBJS = $(SRCS:.cpp=.o)
 HEADER = AMateria.hpp\
 Ice.hpp\
 Cure.hpp\
+Character.hpp\
 ICharacter.hpp\
 
 CXX = $(shell which c++ clang++ g++ | head -n 1)

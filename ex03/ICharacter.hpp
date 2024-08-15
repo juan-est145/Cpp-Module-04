@@ -8,9 +8,6 @@ class AMateria;
 
 class ICharacter
 {
-protected:
-	std::string _name;
-	AMateria *_inventory[4];
 public:
 	virtual ~ICharacter(void) {};
 	virtual std::string const &getName() const = 0;
