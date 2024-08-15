@@ -3,7 +3,6 @@ NAME = interface.out
 SRCS = AMateria.cpp\
 Ice.cpp\
 Cure.cpp\
-ICharacter.cpp\
 main.cpp\
 
 OBJS = $(SRCS:.cpp=.o)

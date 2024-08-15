@@ -12,7 +12,7 @@ protected:
 	std::string _name;
 	AMateria *_inventory[4];
 public:
-	virtual ~ICharacter(void);
+	virtual ~ICharacter(void) {};
 	virtual std::string const &getName() const = 0;
 	virtual void equip(AMateria *m) = 0;
 	virtual void unequip(int idx) = 0;
