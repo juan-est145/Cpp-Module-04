@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 class Ice : public AMateria
 {
@@ -12,7 +13,7 @@ public:
 	Ice(const Ice &toCopy);
 	Ice &operator=(const Ice &toCopy);
 	AMateria *clone() const;
-	// virtual void use(ICharacter &target); Character interface pending to be created
+	void use(ICharacter &target);
 	~Ice(void);
 };
 #endif

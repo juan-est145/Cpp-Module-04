@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 18:46:37 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 09:41:53 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 10:09:10 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,12 @@ AMateria &AMateria::operator=(const AMateria &toCopy)
 std::string const &AMateria::getType() const
 {
 	return (this->_type);
+}
+
+void AMateria::use(ICharacter &target)
+{
+	std::cout << "Can't use this method, this is an abstract class" << std::endl;
+	(void)target;
 }
 
 AMateria::~AMateria(void) {}

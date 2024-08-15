@@ -12,7 +12,7 @@ public:
 	Cure(const Cure &toCopy);
 	Cure &operator=(const Cure &toCopy);
 	AMateria *clone() const;
-	// virtual void use(ICharacter &target); Character interface pending to be created
+	void use(ICharacter &target);
 	~Cure(void);
 };
 #endif

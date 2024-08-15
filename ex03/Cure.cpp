@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 09:25:22 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 09:41:53 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 10:06:11 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ Cure &Cure::operator=(const Cure &toCopy)
 AMateria *Cure::clone() const
 {
 	return (new Cure());
+}
+
+void Cure::use(ICharacter &target)
+{
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }
 
 Cure::~Cure(void)
