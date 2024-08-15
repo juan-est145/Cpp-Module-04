@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 19:44:05 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 20:01:01 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 20:04:31 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,22 @@ MateriaSource::MateriaSource(void)
 
 MateriaSource::MateriaSource(const MateriaSource &toCopy)
 {
-	
+	this->_size = toCopy._size;
+	this->_copyMaterias(toCopy);
+}
+
+MateriaSource &MateriaSource::operator=(const MateriaSource &toCopy)
+{
+	if (this != &toCopy)
+	{
+		this->_destroyMaterias();
+		this->_size = toCopy._size;
+		this->_copyMaterias(toCopy);
+	}
+	return (*this);
+}
+
+MateriaSource::~MateriaSource(void)
+{
+	this->_destroyMaterias();
 }
