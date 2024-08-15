@@ -17,6 +17,9 @@ private:
 	void _initInventory(void);
 	void _destroyInventory(void);
 	void _copyInventory(const Character &toCopy);
+	void _initGround(void);
+	void _destroyGround(void);
+	void _copyGround(const Character &toCopy);
 	void _dropToGround(AMateria *toDrop);
 public:
 	Character(void);
