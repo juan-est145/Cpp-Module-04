@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 15:18:14 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 20:30:54 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 21:00:12 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,7 @@ void Character::equip(AMateria *m)
 		}
 	}
 	std::cout << "Inventory is full, cannot save that materia" << std::endl;
+	delete m;
 }
 
 void Character::unequip(int idx)

@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 19:44:05 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 20:42:43 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 21:01:32 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void MateriaSource::learnMateria(AMateria *materia)
 			return;
 		}
 	}
+	delete materia;
 	std::cout << "This Source can't learn more Materias" << std::endl;
 }
 
