@@ -6,8 +6,10 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 09:36:37 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 09:41:54 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 09:47:00 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ICharacter.hpp"
+
+ICharacter::~ICharacter(void) {}
