@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 15:18:14 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 19:32:14 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 19:36:53 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,6 +136,16 @@ void Character::unequip(int idx)
 	this->_dropToGround(this->_inventory[idx]);
 	std::cout << "Unequiped Materia " << this->_inventory[idx]->getType() << std::endl;
 	this->_inventory[idx] = NULL;
+}
+
+void Character::use(int idx, ICharacter &target)
+{
+	if (idx < 0 || idx >= this->_size || this->_inventory[idx] == NULL)
+	{
+		std::cout << "Invalid index" << std::endl;
+		return ;
+	}
+	this->_inventory[idx]->use(target);
 }
 
 Character::~Character(void)
