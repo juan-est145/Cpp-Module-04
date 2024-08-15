@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 09:25:22 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/15 09:27:10 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/15 09:27:46 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ Cure::Cure(void) : AMateria()
 
 Cure::Cure(const Cure &toCopy) : AMateria(toCopy)
 {
-	std::cout << "Copy constructor of Cure was called" << std::endl;
+	std::cout << "Copy constructor of cure was called" << std::endl;
 	*this = toCopy;
 }
 
 Cure &Cure::operator=(const Cure &toCopy)
 {
-	std::cout << "Copy assignment constructor of Cure was called" << std::endl;
+	std::cout << "Copy assignment constructor of cure was called" << std::endl;
 	if (this != &toCopy)
 		this->_type = toCopy._type;
 	return (*this);
@@ -39,5 +39,5 @@ AMateria *Cure::clone() const
 
 Cure::~Cure(void)
 {
-	std::cout << "Destructor of Cure was called" << std::endl;
+	std::cout << "Destructor of cure was called" << std::endl;
 }
